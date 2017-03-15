@@ -2,7 +2,7 @@
 
 <% if user_signed_in? %>
 
-<h1>Contacts</h1>
+<h1 id= 'contacts'>Contacts</h1>
 
 <table>
   <thead>
@@ -36,7 +36,7 @@
 
 <div class="jumbotron">
 
-<h3><%= link_to 'Click Here', new_user_registration_path %> to sign up for your personal CRM</h3>
+<h3><%= link_to 'Click Here', new_user_registration_path, id: 'click_here' %> to sign up for your personal CRM</h3>
 
 <h3><%= link_to 'sign in', new_user_session_path %> </h3>
 
