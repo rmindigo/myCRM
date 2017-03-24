@@ -1,8 +1,9 @@
 require "selenium-webdriver"
 require "rspec"
+require "browserstack/local"
 
+describe "Get the title" do
 
-describe "Get the title" do 
 
 	before(:each) do
 	    # Input capabilities
@@ -15,6 +16,12 @@ describe "Get the title" do
 		caps["browserstack.local"] = "true"
 		caps["name"] = "Testing MyCrm"
 
+		# Set Local connection via code binding
+		caps["browserstack.local"] = "true"
+		@bs_local = BrowserStack::Local.new
+		@bs_local.start({ "key" => "yiDYpaqBwo6Ae47ZxkVn", "force" => true})
+
+
 		@driver = Selenium::WebDriver.for(:remote,
 		  :url => "http://ryanmindigo1:yiDYpaqBwo6Ae47ZxkVn@hub-cloud.browserstack.com/wd/hub",
 		  :desired_capabilities => caps)
@@ -24,7 +31,8 @@ describe "Get the title" do
 	 end
 	 
 	 after(:each) do
-	    @driver.quit   
+	    @driver.quit  
+	    @bs_local.stop
 	 end
 
 	it 'check title' do 
@@ -48,7 +56,7 @@ describe "Get the title" do
 
 		email = @driver.find_element(:id, 'user_email')
 
-		email.send_keys 'ryan1234@pick.co'
+		email.send_keys 'ryan3236@pick.co'
 
 		pswd = @driver.find_element(:id, 'user_password')
 
