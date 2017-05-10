@@ -27,6 +27,7 @@ gem 'devise', '~> 4.2'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'rspec', '~> 3.5'
 gem 'selenium-webdriver', '~> 3.2'
+gem 'browserstack-local', '~> 1.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
