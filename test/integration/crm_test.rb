@@ -56,7 +56,7 @@ describe "Get the title" do
 
 		email = @driver.find_element(:id, 'user_email')
 
-		email.send_keys 'ryanmmm990122@pick.co'
+		email.send_keys 'ryanmmm91233@pick.co'
 
 		pswd = @driver.find_element(:id, 'user_password')
 
