@@ -23,7 +23,7 @@ describe "Get the title" do
 
 
 		@driver = Selenium::WebDriver.for(:remote,
-		  :url => "http://ryanmindigo1:W63dFTbQLjYpNpHq6giv@hub-cloud.browserstack.com/wd/hub",
+		  :url => "http://robroskop1:qFbvcfiNLF6J3F387xwv@hub-cloud.browserstack.com/wd/hub",
 		  :desired_capabilities => caps)
 	    @base_url = "http://localhost:3000/"
 	    @accept_next_alert = true
@@ -56,7 +56,7 @@ describe "Get the title" do
 
 		email = @driver.find_element(:id, 'user_email')
 
-		email.send_keys 'ryan21r@pick.co'
+		email.send_keys 'ryan28r@pick.co'
 
 		pswd = @driver.find_element(:id, 'user_password')
 
