@@ -9,17 +9,18 @@ describe "Get the title" do
 	    # Input capabilities
 		caps = Selenium::WebDriver::Remote::Capabilities.new
 		caps["browser"] = "IE"
-		caps["browser_version"] = "7.0"
+		caps["browser_version"] = "11.0"
 		caps["os"] = "Windows"
-		caps["os_version"] = "XP"
+		caps["os_version"] = "10"
 		caps["browserstack.debug"] = "true"
 		caps["browserstack.local"] = "true"
 		caps["name"] = "Testing MyCrm"
+		caps["build"] = "Demo Build"
 
 		# Set Local connection via code binding
 		caps["browserstack.local"] = "true"
 		@bs_local = BrowserStack::Local.new
-		@bs_local.start({ "key" => "W63dFTbQLjYpNpHq6giv", "force" => true})
+		@bs_local.start({ "key" => "qFbvcfiNLF6J3F387xwv", "force" => true})
 
 
 		@driver = Selenium::WebDriver.for(:remote,
@@ -56,7 +57,7 @@ describe "Get the title" do
 
 		email = @driver.find_element(:id, 'user_email')
 
-		email.send_keys 'ryan980r@pick.co'
+		email.send_keys 'ryaan980r@pick.co'
 
 		pswd = @driver.find_element(:id, 'user_password')
 
